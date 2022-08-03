@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'com.blocksmc'
+version '1.0-SNAPSHOT'
+
+repositories {
+    gradlePluginPortal()
+    mavenCentral()
+    maven {
+        url "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+    }
+    maven {
+        url = 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+}
+
+dependencies {
+    implementation("gradle.plugin.com.github.johnrengelman:shadow:7.1.2")
+//    implementation("org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT")
+//    implementation("org.bukkit:craftbukkit:1.8.8-R0.1-SNAPSHOT")
+    implementation(files("D:\\Coding\\BuildTools\\spigot-1.8.8.jar"))
+    implementation(files("D:\\Coding\\BuildTools\\craftbukkit-1.8.8.jar"))
+}
